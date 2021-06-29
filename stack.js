@@ -2,13 +2,13 @@
     class node {
         constructor(value) {
             this.data = value;
-            this.next = undefined;
+            this.next = null;
         }
     }
 
     class stack {
         constructor() {
-            this.top = undefined;
+            this.top = null;
             this._size = 0;
         }
 
@@ -29,7 +29,7 @@
         peek() {
             if (this.top == null) {
                 console.log(`stack is empty`);
-                return;
+                return null;
             }
             return this.top.data;
         }
@@ -47,7 +47,7 @@
         update(value) {
             if (this.top == null) {
                 console.log(`stack is empty`);
-                return;
+                return null;
             }
             this.top.data = value;
         }
