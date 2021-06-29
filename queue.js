@@ -2,14 +2,14 @@
     class node {
         constructor(value) {
             this.data = value;
-            this.next = undefined;
+            this.next = null;
         }
     }
 
     class queue {
         constructor() {
-            this.head = undefined;
-            this.tail = undefined;
+            this.head = null;
+            this.tail = null;
             this.size = 0;
         }
 
@@ -36,7 +36,7 @@
         print() {
             if (this.head == null) {
                 console.log(`queue is empty`);
-                return;
+                return null;
             }
             return this.head.data;
         }
@@ -54,7 +54,7 @@
         updateFront(value) {
             if (this.head == null) {
                 console.log(`queue is empty`);
-                return;
+                return null;
             }
             this.head.data = value;
         }
@@ -72,7 +72,7 @@
         dequeue() {
             if (this.head == null) {
                 console.log(`queue underflow`);
-                return;
+                return null;
             }
             let target = this.head;
             this.head = this.head.next;
